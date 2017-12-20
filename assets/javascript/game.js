@@ -20,7 +20,7 @@
 	randomComputer = Math.floor(Math.random() * 101 ) + 19;
 	console.log(randomComputer);
 
-// Store the randomComputer to randomNumber id.
+// Store the randomComputer to randomNumber html id.
 
 	$("#randomNumber").text("Target Number: " + randomComputer);
 
@@ -38,8 +38,13 @@
 	
 	var  score = 0; //Array to store the sum of random numbers generated on crystals.
 
+
+// Assigning the html id numberOfWins and nuymberOfLosses to array Wins and Losses respectiviely
+
 	$("#numberOfWins").text(Wins);
 	$("#numberOfLosses").text(Losses);
+
+//Reset the game and generate new random numer for computer and crystals.
 
 	function reset(){
 		randomComputer = Math.floor(Math.random() * 101 ) + 19;
@@ -60,7 +65,7 @@
       $("#finalScore").text(score);
       } 
 
-
+// Define a function to alert "you won" then increment Wins and store the Wins to html id numberOfWins
 	function yay(){
 	alert("You won!");
   	Wins++; 
@@ -68,7 +73,7 @@
   	reset();
 	}
 
-
+// Define a function to alert "you lost" then increment Losses and store the Losses to html id numberOfLosses
 	function loser(){
 	alert ("You lose!");
   	Losses++;
@@ -76,7 +81,7 @@
   	reset()
 	}
 
-//sets up click for jewels
+//sets up click for crystals
   $('#crystal1').on ('click', function(){
     score = score + crystal1;
     console.log("New score= " + score);
@@ -129,6 +134,6 @@
 
 //Issues to fix:
 // RandomTarget is not getting displayed on screen when game resets- fixed
-//Random number on crystala are not getting reset in every game, whcih means that the crystals are nto generating new number every game - fixed
-//Wins and Losses gets overwritten with the number of wins and losses - Fixed
+// Random number on crystala are not getting reset in every game, whcih means that the crystals are nto generating new number every game - fixed
+// Wins and Losses gets overwritten with the number of wins and losses - Fixed
 // Total Score is not updating. - Fixed
