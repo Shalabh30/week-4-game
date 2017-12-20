@@ -3,9 +3,78 @@
 	text-align: center;
 }
 
+body {
+	background-image: url("../images/darkness.png");
+}
+
+.header {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	color: white;
+}
+
+
 .crystal-image {
 	height: 100px;
 	width: 100px;
 	margin:20px;
 	border:1px solid black;
+}
+
+
+.RandomTarget {
+	border: 5px dashed red;
+	padding: 20px;
+	margin-left: 550px;
+	margin-right: 550px;
+	color: red;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-weight: bold;
+	background-color: lightyellow;
+	font-size: 20px;
+}
+
+.Result {
+
+	padding: 5px;
+	border: 4px dashed green;
+	margin-top: 15px;
+	margin-right: 575px;
+	margin-left: 575px;
+	margin-bottom: 10px;
+	color: green;
+	background-color: lightyellow;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 15px;
+}
+
+.score {
+	padding: 5px;
+	border: 4px dashed green;
+	margin-top: 5px;
+	margin-right: 550px;
+	margin-left: 550px;
+	color: green;
+	background-color: lightyellow;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 15px;
+}
+
+.instructions {
+	padding: 5px;
+	/*border: 4px dashed green;*/
+	margin-top: 20px;
+	color: lightyellow;
+	background-color: black;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+	font-size: 12px;
+	position: fixed;
+	bottom: 0;
+}	
+
+
+
+
+h2 {
+	font-family: 'Georgia', Times, Times New Roman, serif;
 }

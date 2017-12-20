@@ -20,9 +20,9 @@
 	randomComputer = Math.floor(Math.random() * 101 ) + 19;
 	console.log(randomComputer);
 
-// Store the randomComputer to randomTarget id.
+// Store the randomComputer to randomNumber id.
 
-	$("#randomTarget").text("Target Number: " + randomComputer);
+	$("#randomNumber").text("Target Number: " + randomComputer);
 
  //Generate random number between 1 and 12 for each crystal
 
@@ -35,43 +35,36 @@
 	console.log(crystal2);
 	console.log(crystal3);
 	console.log(crystal4);
-
 	
 	var  score = 0; //Array to store the sum of random numbers generated on crystals.
 
-	$(".Wins").append(Wins);
-	$(".Losses").append(Losses);
-
-//	var restart = function(){
-//		addition = 0;
-//		randomComputer = Math.floor(Math.random() * 101 ) + 19;
-//		console.log(randomComputer);
-//
-//		$("#randomTarget").text("Target Number: " + randomComputer);
-//		var crystal1 = Math.floor(Math.random() * 11) + 1;
-//		var crystal2 = Math.floor(Math.random() * 11) + 1;
-//		var crystal3 = Math.floor(Math.random() * 11) + 1;
-//		var crystal4 = Math.floor(Math.random() * 11) + 1;						
-//	}
+	$("#numberOfWins").text(Wins);
+	$("#numberOfLosses").text(Losses);
 
 	function reset(){
 		randomComputer = Math.floor(Math.random() * 101 ) + 19;
       console.log(randomComputer);
 
-		$("#randomTarget").text("Target Number: " + randomComputer);
-		var crystal1 = Math.floor(Math.random() * 11) + 1;
-		var crystal2 = Math.floor(Math.random() * 11) + 1;
-		var crystal3 = Math.floor(Math.random() * 11) + 1;
-		var crystal4 = Math.floor(Math.random() * 11) + 1;	
-      score= 0;
-      $('#finalScore').text(score);
+		$("#randomNumber").text("Target Number: " + randomComputer);
+		crystal1 = Math.floor(Math.random() * 11) + 1;
+		crystal2 = Math.floor(Math.random() * 11) + 1;
+		crystal3 = Math.floor(Math.random() * 11) + 1;
+		crystal4 = Math.floor(Math.random() * 11) + 1;
+
+      console.log(crystal1);
+      console.log(crystal2);
+      console.log(crystal3);
+      console.log(crystal4);	
+    
+      score = 0;
+      $("#finalScore").text(score);
       } 
 
 
 	function yay(){
 	alert("You won!");
   	Wins++; 
-  	$('#Wins').text(Wins);
+  	$('#numberOfWins').text(Wins);
   	reset();
 	}
 
@@ -79,7 +72,7 @@
 	function loser(){
 	alert ("You lose!");
   	Losses++;
-  	$('#Losses').text(Losses);
+  	$('#numberOfLosses').text(Losses);
   	reset()
 	}
 
@@ -132,3 +125,10 @@
           loser();
         }   
   })  
+
+
+//Issues to fix:
+// RandomTarget is not getting displayed on screen when game resets- fixed
+//Random number on crystala are not getting reset in every game, whcih means that the crystals are nto generating new number every game - fixed
+//Wins and Losses gets overwritten with the number of wins and losses - Fixed
+// Total Score is not updating. - Fixed
